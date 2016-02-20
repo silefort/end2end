@@ -5,8 +5,8 @@ require "bundler/setup"
 require "jekyll"
 
 # Change your GitHub reponame
-GITHUB_REPONAME    = "nandomoreirame/end2end"
-GITHUB_REPO_BRANCH = "gh-pages"
+GITHUB_REPONAME    = "silefort/silefort.github.io"
+GITHUB_REPO_BRANCH = "dev"
 
 SOURCE = "source/"
 DEST   = "_site"
@@ -29,7 +29,7 @@ task :generate do
   })).process
 end
 
-desc "Generate and publish blog to gh-pages"
+desc "Generate and publish blog to dev"
 task :publish => [:generate] do
   Dir.mktmpdir do |tmp|
     cp_r "_site/.", tmp
